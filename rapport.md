@@ -64,3 +64,17 @@ Entrée de la fiche photo dans sitemap.xml :
 À 390 px, je vois … (joindre une capture ou décrire le test réalisé) :
 Sans JS je peux lire … ; après réactivation du JS, le bouton …
 J’ai choisi le pré-rendu pour ces fiches parce que …
+
+## 5 · Consolidation
+
+(1) **href** · (2) **DOM** · (3) **pré-rendu** · (4) **hydratation** · (5) **robots.txt** · (6) **sitemap.xml**
+
+## 6 · QCM final
+
+01 · **B** — Le h1 est présent dans Éléments mais absent de la réponse : il a été ajouté après réception, par JavaScript.
+02 · **A** — Produire un HTML par fiche au build. Dans notre projet, `npm run actualiser` génère un `index.html` par fiche avec son h1 déjà présent, sans serveur dynamique.
+03 · **C** — La canonique indique l’URL de référence de la fiche (`https://labo.example/...`).
+04 · **B** — `sitemap.xml` doit contenir l’adresse publique de la nouvelle fiche photo.
+05 · **A** — L’inspection de l’URL dans Search Console indique si Google a indexé la fiche.
+
+Retour sur le QCM de positionnement : la réponse 02 (C, Réseau › Document › Réponse) est maintenant vérifiée : la réponse HTTP d’une fiche non pré-rendue contenait `<div id="root"></div>`, ce qui prouve que le texte visible peut apparaître seulement après l’exécution de React.
