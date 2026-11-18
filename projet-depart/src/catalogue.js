@@ -16,7 +16,7 @@ export const ateliers = [
     duration: '90 minutes', audience: 'Dès 14 ans, débutants',
     place: 'Paris 19e', price: 'Gratuit, sur inscription',
     image: '/images/clavier.svg',
-    alt: '',
+    alt: 'Schéma d’une touche de clavier mécanique : le capuchon, l’interrupteur et la plaque de fixation avant assemblage.',
   },
 ];
 export const pages = [accueil, ...ateliers];

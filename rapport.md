@@ -18,6 +18,8 @@ Date, URL de la fiche clavier, version de Chrome : 18/11/2026 · http://localhos
 - TP 1 · Le « Voir » est devenu `<a href="/ateliers/clavier-mecanique/">Assembler un clavier à Paris</a>` : Tab + Entrée ouvre la fiche. Son grand titre est désormais un `<h1 class="big">` et « Infos pratiques » un `<h2 class="sub">` ; le mémo reste un bouton.
 - TP 1 · Title de l’accueil / title de la fiche / description de la fiche : « Ateliers créatifs à Paris 19e | Le Labo du quartier » / « Atelier clavier à Paris 19e | Le Labo » / « En 90 minutes, assemble une touche de clavier mécanique. Atelier gratuit à Paris 19e, dès 14 ans. Matériel fourni. » Ces trois textes viennent de `src/catalogue.js` et sont insérés par `src/Metas.jsx` ; la canonique reste inchangée.
 
+- TP 1 · À 390 px, la durée, le lieu, le niveau et le prix restent visibles (la règle qui masquait `.facts` a été supprimée) ; le schéma se réduit à la largeur de l’écran et porte un `alt` descriptif.
+
 ## 2 · Quand le titre et le bouton fonctionnent
 
 Ex. 3 · Observe les deux modes dans Manip_rendu.html.

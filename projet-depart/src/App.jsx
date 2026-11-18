@@ -8,7 +8,7 @@ function Fiche({ page }) {
       <p className="kicker">Fiche atelier</p>
       <h1 className="big">{page.name}</h1>
       <p className="lead">{page.intro}</p>
-      <img className="schema" src={page.image} />
+      <img className="schema" src={page.image} alt={page.alt} width="720" height="280" />
       <h2 className="sub">Infos pratiques</h2>
       <ul className="facts">
         <li>{page.duration}</li>
