@@ -32,9 +32,9 @@ Ex. 3 · Observe les deux modes dans Manip_rendu.html.
 À décider en binôme : pour cinq fiches stables, le pré-rendu (SSG) suffit et livre le texte dès la réponse ; si les places doivent être recalculées à chaque requête, il faut passer au rendu serveur (SSR), qui calcule le HTML à chaque visite tout en gardant le texte disponible immédiatement. Le CSR seul laisse une racine vide jusqu’à l’exécution du script.
 Hydratation : le mémo commence à répondre précisément au moment du clic sur « Lancer React » en mode fiche pré-rendue, quand `hydrateRoot` a rattaché les gestionnaires d’événements au bouton déjà présent.
 
-TP 2 · H1 copié dans la réponse HTTP après pré-rendu :
-Bouton mémo, avant puis après le clic :
-Contenu lu avec JavaScript coupé :
+TP 2 · H1 copié dans la réponse HTTP après pré-rendu : `<h1 class="big">Assembler un clavier à Paris</h1>` (présent dans `dist/ateliers/clavier-mecanique/index.html`, généré par `renderToString(<App page={page} />)` dans `src/entry-server.jsx`).
+Bouton mémo, avant puis après le clic : « Ajouter à mon mémo » puis « Retirer de mon mémo » (le clic fonctionne après l’hydratation).
+Contenu lu avec JavaScript coupé : le titre, l’introduction, le schéma et son texte alternatif, ainsi que les informations pratiques (90 minutes, dès 14 ans/débutants, Paris 19e, gratuit sur inscription). Seul le bouton mémo ne répond plus.
 
 ## 3 · Ce que j’ai corrigé
 
