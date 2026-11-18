@@ -2,19 +2,19 @@ export const origin = 'https://labo.example';
 export const accueil = {
   path: '/',
   name: 'Les ateliers du Labo',
-  title: 'Ateliers', description: '',
+  title: 'Ateliers', description: 'Une fiche clavier sur Paris',
   intro: 'Découvrez nos activités.',
 };
 export const ateliers = [
   {
     path: '/ateliers/clavier-mecanique/',
-    name: 'Atelier 01',
-    title: 'Ateliers', description: '',
+    name: 'Assembler un clavier à Paris',
+    title: 'Ateliers', description: 'Une fiche clavier sur Paris',
     intro: 'Un atelier pour découvrir de nouvelles choses.',
     duration: '90 minutes', audience: 'Dès 14 ans, débutants',
     place: 'Paris 19e', price: 'Gratuit, sur inscription',
     image: '/images/clavier.svg',
-    alt: '',
+    alt: 'Une image de clavier sur Paris',
   },
 ];
 export const pages = [accueil, ...ateliers];

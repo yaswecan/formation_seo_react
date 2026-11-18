@@ -6,6 +6,6 @@ export { pages } from './catalogue.js';
 
 export function renderPage(page) {
   const head = renderToStaticMarkup(<Metas page={page} />);
-  const body = '';
+  const body = renderToString(<App page={page} />);
   return { head, body };
 }
