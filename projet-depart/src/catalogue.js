@@ -8,7 +8,7 @@ export const accueil = {
 export const ateliers = [
   {
     path: '/ateliers/clavier-mecanique/',
-    name: 'Atelier 01',
+    name: 'Assembler un clavier à Paris',
     title: 'Ateliers', description: '',
     intro: 'Un atelier pour découvrir de nouvelles choses.',
     duration: '90 minutes', audience: 'Dès 14 ans, débutants',
