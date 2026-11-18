@@ -51,9 +51,9 @@ Noms des fichiers et scores SEO observés : `audits/lighthouse-avant.html` (SEO 
 À justifier : le test sans JavaScript montre que le h1, l’introduction, le schéma et les informations pratiques sont déjà dans la réponse HTTP. Le rôle de React n’est donc pas de fournir le texte indexable ici, mais d’hydrater ce HTML pour rendre le bouton mémo interactif ; un audit SEO seul ne mesure pas cette interaction.
 
 Prochaine amélioration et test pour la vérifier : générer `sitemap.xml` automatiquement à partir du tableau `ateliers` ; pour vérifier, ajouter une fiche, relancer `npm run actualiser` et contrôler qu’une nouvelle entrée `<url>` apparaît dans `/sitemap.xml`.
-Search Console simulée : CTR de A = … ; CTR de B = … ; les clics …
-Mon hypothèse et le filtre pour la tester :
-Outil qui indique si la page est indexée sur un site publié :
+Search Console simulée : CTR de A = 36 ÷ 600 × 100 = **6 %** ; CTR de B = 48 ÷ 1 200 × 100 = **4 %**. Les impressions ont doublé (600 → 1 200) et les clics ont augmenté (36 → 48), mais le CTR a baissé de 2 points.
+Mon hypothèse et le filtre pour la tester : la fiche apparaît sur davantage de requêtes, dont certaines moins pertinentes (ou à une position moyenne plus basse), ce qui fait baisser le CTR malgré plus de clics. Je filtrerais par « Requête » pour comparer les mêmes requêtes sur les deux périodes de 28 jours, en gardant le filtre « Mobile ».
+Outil qui indique si la page est indexée sur un site publié : l’inspection de l’URL dans Search Console (sur une propriété vérifiée) ; `site:labo.example/ateliers/clavier-mecanique/` donne une vérification rapide.
 
 ## 4 · Ma fiche photo
 
