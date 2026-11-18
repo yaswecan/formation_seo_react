@@ -6,10 +6,10 @@ function Fiche({ page }) {
   return (
     <article>
       <p className="kicker">Fiche atelier</p>
-      <div className="big">{page.name}</div>
+      <h1 className="big">{page.name}</h1>
       <p className="lead">{page.intro}</p>
-      <img className="schema" src={page.image} />
-      <div className="sub">Infos pratiques</div>
+      <img className="schema" src={page.image} alt={page.alt} width='720' height='280' />
+      <h2 className="sub">Infos pratiques</h2>
       <ul className="facts">
         <li>{page.duration}</li><li>{page.audience}</li>
         <li>{page.place}</li><li>{page.price}</li>
@@ -25,14 +25,13 @@ function Accueil({ page }) {
   return (
     <section>
       <p className="kicker">Le programme</p>
-      <div className="big">{page.name}</div>
+      <h1 className="big">{page.name}</h1>
       <p className="lead">{page.intro}</p>
-      <div className="sub">À découvrir</div>
+      <h2 className="sub">À découvrir</h2>
       <ul className="events">
         {ateliers.map((atelier) => (
           <li key={atelier.path}>
-            <span>{atelier.name}</span>{' '}
-            <button onClick={() => location.assign(atelier.path)}>Voir</button>
+            <a href={atelier.path}>{atelier.name}</a>
           </li>
         ))}
       </ul>

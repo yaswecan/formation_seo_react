@@ -1,0 +1,6 @@
+1 = href
+2 = DOM
+3 = pré-rendu
+4 = l'hydratation
+5 = robot.txt
+6 = sitemap.xml
