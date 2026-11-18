@@ -16,7 +16,7 @@ Date, URL de la fiche clavier, version de Chrome : 18/11/2026 · http://localhos
 - Ex. 1 · Dans Éléments, le titre était dans cette balise : `<div class="big">Atelier 01</div>` — React l’a ajoutée après réception du document.
 - Ex. 2 · Après avoir changé `name` en « Assembler un clavier à Paris », je lisais sur la fiche « Assembler un clavier à Paris » et dans l’onglet « Ateliers » : le grand titre vient de `atelier.name` dans `App.jsx`, alors que l’onglet utilise le `<title>` fixe de `Metas.jsx`.
 - TP 1 · Le « Voir » est devenu `<a href="/ateliers/clavier-mecanique/">Assembler un clavier à Paris</a>` : Tab + Entrée ouvre la fiche. Son grand titre est désormais un `<h1 class="big">` et « Infos pratiques » un `<h2 class="sub">` ; le mémo reste un bouton.
-- TP 1 · Title de l’accueil / title de la fiche / description de la fiche :
+- TP 1 · Title de l’accueil / title de la fiche / description de la fiche : « Ateliers créatifs à Paris 19e | Le Labo du quartier » / « Atelier clavier à Paris 19e | Le Labo » / « En 90 minutes, assemble une touche de clavier mécanique. Atelier gratuit à Paris 19e, dès 14 ans. Matériel fourni. » Ces trois textes viennent de `src/catalogue.js` et sont insérés par `src/Metas.jsx` ; la canonique reste inchangée.
 
 ## 2 · Quand le titre et le bouton fonctionnent
 
