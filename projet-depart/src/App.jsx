@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ateliers } from './catalogue.js';
+import React, { useState } from "react";
+import { ateliers } from "./catalogue.js";
 
 function Fiche({ page }) {
   const [memo, setMemo] = useState(false);
@@ -11,11 +11,13 @@ function Fiche({ page }) {
       <img className="schema" src={page.image} />
       <div className="sub">Infos pratiques</div>
       <ul className="facts">
-        <li>{page.duration}</li><li>{page.audience}</li>
-        <li>{page.place}</li><li>{page.price}</li>
+        <li>{page.duration}</li>
+        <li>{page.audience}</li>
+        <li>{page.place}</li>
+        <li>{page.price}</li>
       </ul>
       <button type="button" aria-pressed={memo} onClick={() => setMemo(!memo)}>
-        {memo ? 'Retirer de mon mémo' : 'Ajouter à mon mémo'}
+        {memo ? "Retirer de mon mémo" : "Ajouter à mon mémo"}
       </button>
     </article>
   );
@@ -31,8 +33,7 @@ function Accueil({ page }) {
       <ul className="events">
         {ateliers.map((atelier) => (
           <li key={atelier.path}>
-            <span>{atelier.name}</span>{' '}
-            <button onClick={() => location.assign(atelier.path)}>Voir</button>
+            <a href={atelier.path}>{atelier.name}</a>
           </li>
         ))}
       </ul>
@@ -41,11 +42,24 @@ function Accueil({ page }) {
 }
 
 export default function App({ page }) {
-  if (!page) return <main><h1>Page introuvable</h1><a href="/">Accueil</a></main>;
+  if (!page)
+    return (
+      <main>
+        <h1>Page introuvable</h1>
+        <a href="/">Accueil</a>
+      </main>
+    );
   return (
     <div className="shell">
-      <header><a className="brand" href="/">Le Labo du quartier</a><span>Paris 19e</span></header>
-      <main>{page.path === '/' ? <Accueil page={page} /> : <Fiche page={page} />}</main>
+      <header>
+        <a className="brand" href="/">
+          Le Labo du quartier
+        </a>
+        <span>Paris 19e</span>
+      </header>
+      <main>
+        {page.path === "/" ? <Accueil page={page} /> : <Fiche page={page} />}
+      </main>
       <footer>Le Labo du quartier · Ateliers numériques</footer>
     </div>
   );
