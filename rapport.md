@@ -36,6 +36,8 @@ TP 2 · H1 copié dans la réponse HTTP après pré-rendu : `<h1 class="big">Ass
 Bouton mémo, avant puis après le clic : « Ajouter à mon mémo » puis « Retirer de mon mémo » (le clic fonctionne après l’hydratation).
 Contenu lu avec JavaScript coupé : le titre, l’introduction, le schéma et son texte alternatif, ainsi que les informations pratiques (90 minutes, dès 14 ans/débutants, Paris 19e, gratuit sur inscription). Seul le bouton mémo ne répond plus.
 
+TP 2 · `/robots.txt` autorise tout (`Allow: /`) et annonce `https://labo.example/sitemap.xml` ; ce sitemap contient l’accueil et la fiche clavier. Une requête vers `/inconnue/` renvoie un statut 404.
+
 ## 3 · Ce que j’ai corrigé
 
 Joins les deux audits Lighthouse mobiles de la fiche clavier. Utilise exactement la même URL.
