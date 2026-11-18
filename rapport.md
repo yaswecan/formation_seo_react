@@ -57,13 +57,16 @@ Outil qui indique si la page est indexée sur un site publié : l’inspection d
 
 ## 4 · Ma fiche photo
 
-URL et statut HTTP :
-Lien vers la fiche depuis l’accueil :
+URL et statut HTTP : `http://localhost:4173/ateliers/photo-smartphone/` · **200** (`/inconnue/` renvoie 404).
+Lien vers la fiche depuis l’accueil : `<a href="/ateliers/photo-smartphone/">Photo au smartphone</a>` dans la liste des ateliers.
 Title, h1 et canonique copiés dans la réponse Document :
-Entrée de la fiche photo dans sitemap.xml :
-À 390 px, je vois … (joindre une capture ou décrire le test réalisé) :
-Sans JS je peux lire … ; après réactivation du JS, le bouton …
-J’ai choisi le pré-rendu pour ces fiches parce que …
+- `<title>Atelier photo au smartphone à Paris 19e | Le Labo</title>`
+- `<h1 class="big">Photo au smartphone</h1>`
+- `<link rel="canonical" href="https://labo.example/ateliers/photo-smartphone/">`
+Entrée de la fiche photo dans sitemap.xml : `<url><loc>https://labo.example/ateliers/photo-smartphone/</loc></url>`
+À 390 px, je vois … (joindre une capture ou décrire le test réalisé) : capture `audits/photo-390.png` (Chrome en fenêtre 390 × 844). La durée « 60 minutes », le lieu « Paris 19e », le niveau « Dès 14 ans, débutants » et le prix « Gratuit, sur inscription » sont lisibles sans défilement horizontal ; le schéma occupe au plus la largeur de l’écran. Un audit Lighthouse mobile SEO de cette URL donne 100.
+Sans JS je peux lire … ; après réactivation du JS, le bouton … : sans JavaScript, le titre, l’introduction, les informations pratiques et le schéma sont déjà dans la réponse HTTP pré-rendue ; après réactivation, le bouton « Ajouter à mon mémo » répond et passe à « Retirer de mon mémo ».
+J’ai choisi le pré-rendu pour ces fiches parce que le contenu est stable (quelques mises à jour par an), le texte est livré dès la réponse HTTP donc lisible par les robots même sans JavaScript, et l’hébergement reste statique : l’hydratation ajoute ensuite les interactions (mémo) sans changer le HTML indexé.
 
 ## 5 · Consolidation
 
