@@ -1,0 +1,52 @@
+import React, { useState } from 'react';
+import { ateliers } from './catalogue.js';
+
+function Fiche({ page }) {
+  const [memo, setMemo] = useState(false);
+  return (
+    <article>
+      <p className="kicker">Fiche atelier</p>
+      <div className="big">{page.name}</div>
+      <p className="lead">{page.intro}</p>
+      <img className="schema" src={page.image} />
+      <div className="sub">Infos pratiques</div>
+      <ul className="facts">
+        <li>{page.duration}</li><li>{page.audience}</li>
+        <li>{page.place}</li><li>{page.price}</li>
+      </ul>
+      <button type="button" aria-pressed={memo} onClick={() => setMemo(!memo)}>
+        {memo ? 'Retirer de mon mémo' : 'Ajouter à mon mémo'}
+      </button>
+    </article>
+  );
+}
+
+function Accueil({ page }) {
+  return (
+    <section>
+      <p className="kicker">Le programme</p>
+      <div className="big">{page.name}</div>
+      <p className="lead">{page.intro}</p>
+      <div className="sub">À découvrir</div>
+      <ul className="events">
+        {ateliers.map((atelier) => (
+          <li key={atelier.path}>
+            <span>{atelier.name}</span>{' '}
+            <button onClick={() => location.assign(atelier.path)}>Voir</button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export default function App({ page }) {
+  if (!page) return <main><h1>Page introuvable</h1><a href="/">Accueil</a></main>;
+  return (
+    <div className="shell">
+      <header><a className="brand" href="/">Le Labo du quartier</a><span>Paris 19e</span></header>
+      <main>{page.path === '/' ? <Accueil page={page} /> : <Fiche page={page} />}</main>
+      <footer>Le Labo du quartier · Ateliers numériques</footer>
+    </div>
+  );
+}

@@ -1,0 +1,20 @@
+{
+  "name": "labo-du-quartier-seo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "start": "npm run actualiser && vite preview --config vite.static.config.js --port 4173 --strictPort",
+    "actualiser": "vite build && vite build --ssr src/entry-server.jsx --outDir .ssr && node scripts/prerender.mjs"
+  },
+  "dependencies": {
+    "react": "~19.2.0",
+    "react-dom": "~19.2.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
