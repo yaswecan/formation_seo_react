@@ -15,6 +15,7 @@ Date, URL de la fiche clavier, version de Chrome : 18/11/2026 · http://localhos
 - Ex. 1 · Dans Réseau → Document → Réponse, la racine contenait : `<div id="root"></div>` — aucun texte, la chaîne « Atelier 01 » n’y apparaît pas.
 - Ex. 1 · Dans Éléments, le titre était dans cette balise : `<div class="big">Atelier 01</div>` — React l’a ajoutée après réception du document.
 - Ex. 2 · Après avoir changé `name` en « Assembler un clavier à Paris », je lisais sur la fiche « Assembler un clavier à Paris » et dans l’onglet « Ateliers » : le grand titre vient de `atelier.name` dans `App.jsx`, alors que l’onglet utilise le `<title>` fixe de `Metas.jsx`.
+- TP 1 · Le « Voir » est devenu `<a href="/ateliers/clavier-mecanique/">Assembler un clavier à Paris</a>` : Tab + Entrée ouvre la fiche. Son grand titre est désormais un `<h1 class="big">` et « Infos pratiques » un `<h2 class="sub">` ; le mémo reste un bouton.
 - TP 1 · Title de l’accueil / title de la fiche / description de la fiche :
 
 ## 2 · Quand le titre et le bouton fonctionnent
