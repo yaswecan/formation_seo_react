@@ -6,13 +6,13 @@ function Fiche({ page }) {
   return (
     <article>
       <p className="kicker">Fiche atelier</p>
-      <h1 className="big">{page.name}</h1>
+      <div className="big">{page.name}</div>
       <p className="lead">{page.intro}</p>
       <img className="schema" src={page.image} />
-      <h1 className="sub">Infos pratiques</h1>
+      <div className="sub">Infos pratiques</div>
       <ul className="facts">
-        <h2>{page.duration}</h2><h2>{page.audience}</h2>
-        <h2>{page.place}</h2><h2>{page.price}</h2>
+        <li>{page.duration}</li><li>{page.audience}</li>
+        <li>{page.place}</li><li>{page.price}</li>
       </ul>
       <button type="button" aria-pressed={memo} onClick={() => setMemo(!memo)}>
         {memo ? 'Retirer de mon mémo' : 'Ajouter à mon mémo'}
@@ -25,14 +25,14 @@ function Accueil({ page }) {
   return (
     <section>
       <p className="kicker">Le programme</p>
-      <h1 className="big">{page.name}</h1>
+      <div className="big">{page.name}</div>
       <p className="lead">{page.intro}</p>
-      <h1 className="sub">À découvrir</h1>
+      <div className="sub">À découvrir</div>
       <ul className="events">
         {ateliers.map((atelier) => (
           <li key={atelier.path}>
-            <h2>{atelier.name}</h2>{' '}
-            <h2 href={atelier.path}>{atelier.name}</h2>
+            <span>{atelier.name}</span>{' '}
+            <button onClick={() => location.assign(atelier.path)}>Voir</button>
           </li>
         ))}
       </ul>
