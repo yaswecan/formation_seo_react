@@ -26,8 +26,11 @@ Ex. 3 · Observe les deux modes dans Manip_rendu.html.
 
 | Mode | Je peux lire le titre avant « Lancer React » ? | Le mémo répond avant ? | Le mémo répond après ? |
 | --- | --- | --- | --- |
-| Racine vide | | | |
-| Fiche pré-rendue | | | |
+| Racine vide | Non : le document ne contient que `<div id="root"></div>`. | Non : aucun bouton n’existe avant le script. | Oui : `createRoot` affiche la fiche et le bouton devient cliquable. |
+| Fiche pré-rendue | Oui : « Atelier clavier » est déjà dans le HTML reçu. | Non : le bouton est visible mais inerte. | Oui : `hydrateRoot` rattache le clic au HTML existant. |
+
+À décider en binôme : pour cinq fiches stables, le pré-rendu (SSG) suffit et livre le texte dès la réponse ; si les places doivent être recalculées à chaque requête, il faut passer au rendu serveur (SSR), qui calcule le HTML à chaque visite tout en gardant le texte disponible immédiatement. Le CSR seul laisse une racine vide jusqu’à l’exécution du script.
+Hydratation : le mémo commence à répondre précisément au moment du clic sur « Lancer React » en mode fiche pré-rendue, quand `hydrateRoot` a rattaché les gestionnaires d’événements au bouton déjà présent.
 
 TP 2 · H1 copié dans la réponse HTTP après pré-rendu :
 Bouton mémo, avant puis après le clic :
