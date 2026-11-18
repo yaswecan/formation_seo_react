@@ -1,7 +1,14 @@
 # Mon enquête SEO
 
-Prénom :
-Date, URL de la fiche clavier, version de Chrome :
+Prénom : Raphael
+Date, URL de la fiche clavier, version de Chrome : 18/11/2026 · http://localhost:4173/ateliers/clavier-mecanique/ · Google Chrome 157.0.8103.79
+
+## 0 · QCM de positionnement
+
+01 · B — « Construire son clavier à Paris » répond le mieux à la recherche.
+02 · C — Réseau › Document › Réponse montre ce que le serveur a envoyé.
+03 · A — Un lien avec `href` porte l’adresse de destination dans le HTML.
+04 · B — Lighthouse permet d’auditer une page locale.
 
 ## 1 · Ce que j’ai vu
 
