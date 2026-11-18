@@ -41,14 +41,16 @@ TP 2 · `/robots.txt` autorise tout (`Allow: /`) et annonce `https://labo.exampl
 ## 3 · Ce que j’ai corrigé
 
 Joins les deux audits Lighthouse mobiles de la fiche clavier. Utilise exactement la même URL.
-Noms des fichiers et scores SEO observés :
+Noms des fichiers et scores SEO observés : `audits/lighthouse-avant.html` (SEO **83**) et `audits/lighthouse-apres.html` (SEO **100**), deux audits Navigation · Mobile · SEO sur `http://localhost:4174/ateliers/clavier-mecanique/`. Les contrôles `meta-description` et `image-alt` passent de 0 à 1.
 
 | Contrôle | Avant | Fichier modifié | Après (extrait ou observation) |
 | --- | --- | --- | --- |
-| Meta description | | | |
-| Texte alternatif de l’image | | | |
+| Meta description | Contrôle `meta-description` à 0 : aucun résumé dans le `<head>`. | `src/catalogue.js` et `src/Metas.jsx` | Contrôle à 1 : `<meta name="description" content="En 90 minutes, assemble une touche de clavier mécanique. Atelier gratuit à Paris 19e, dès 14 ans. Matériel fourni.">` est dans la réponse Document. |
+| Texte alternatif de l’image | Contrôle `image-alt` à 0 : `<img class="schema" src="/images/clavier.svg" />`. | `src/catalogue.js` et `src/App.jsx` | Contrôle à 1 : `alt="Schéma d’une touche de clavier mécanique : le capuchon, l’interrupteur et la plaque de fixation avant assemblage."`, avec `width="720" height="280"`. |
 
-Prochaine amélioration et test pour la vérifier :
+À justifier : le test sans JavaScript montre que le h1, l’introduction, le schéma et les informations pratiques sont déjà dans la réponse HTTP. Le rôle de React n’est donc pas de fournir le texte indexable ici, mais d’hydrater ce HTML pour rendre le bouton mémo interactif ; un audit SEO seul ne mesure pas cette interaction.
+
+Prochaine amélioration et test pour la vérifier : générer `sitemap.xml` automatiquement à partir du tableau `ateliers` ; pour vérifier, ajouter une fiche, relancer `npm run actualiser` et contrôler qu’une nouvelle entrée `<url>` apparaît dans `/sitemap.xml`.
 Search Console simulée : CTR de A = … ; CTR de B = … ; les clics …
 Mon hypothèse et le filtre pour la tester :
 Outil qui indique si la page est indexée sur un site publié :
