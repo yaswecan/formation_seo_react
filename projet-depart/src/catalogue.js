@@ -8,8 +8,8 @@ export const accueil = {
 export const ateliers = [
   {
     path: '/ateliers/clavier-mecanique/',
-    name: 'Atelier 01',
-    title: 'Ateliers', description: '',
+    name: 'Assembler un clavier à Paris',
+    title: 'Atelier clavier à Paris 19e | Le Labo', description: 'En 90 minutes, assemble une touche de clavier mécanique. Atelier gratuit à Paris 19e, dès 14 ans. Matériel fourni',
     intro: 'Un atelier pour découvrir de nouvelles choses.',
     duration: '90 minutes', audience: 'Dès 14 ans, débutants',
     place: 'Paris 19e', price: 'Gratuit, sur inscription',
