@@ -12,8 +12,8 @@ Date, URL de la fiche clavier, version de Chrome : 18/11/2026 · http://localhos
 
 ## 1 · Ce que j’ai vu
 
-- Ex. 1 · Dans Réseau → Document → Réponse, la racine contenait :
-- Ex. 1 · Dans Éléments, le titre était dans cette balise :
+- Ex. 1 · Dans Réseau → Document → Réponse, la racine contenait : `<div id="root"></div>` — aucun texte, la chaîne « Atelier 01 » n’y apparaît pas.
+- Ex. 1 · Dans Éléments, le titre était dans cette balise : `<div class="big">Atelier 01</div>` — React l’a ajoutée après réception du document.
 - Ex. 2 · Après avoir changé name, je lisais sur la fiche … et dans l’onglet …
 - TP 1 · Title de l’accueil / title de la fiche / description de la fiche :
 
