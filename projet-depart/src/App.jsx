@@ -8,7 +8,7 @@ function Fiche({ page }) {
       <p className="kicker">Fiche atelier</p>
       <div className="big">{page.name}</div>
       <p className="lead">{page.intro}</p>
-      <img className="schema" src={page.image} />
+      <img className="schema" src={page.image} alt={page.alt} />
       <div className="sub">Infos pratiques</div>
       <ul className="facts">
         <li>{page.duration}</li><li>{page.audience}</li>
@@ -25,14 +25,13 @@ function Accueil({ page }) {
   return (
     <section>
       <p className="kicker">Le programme</p>
-      <div className="big">{page.name}</div>
-      <p className="lead">{page.intro}</p>
+      <h1 className="big">{page.name}</h1>
+      <h2 className="lead">{page.intro}</h2>
       <div className="sub">À découvrir</div>
       <ul className="events">
         {ateliers.map((atelier) => (
           <li key={atelier.path}>
-            <span>{atelier.name}</span>{' '}
-            <button onClick={() => location.assign(atelier.path)}>Voir</button>
+            <a href={atelier.path}>{atelier.name}</a>
           </li>
         ))}
       </ul>

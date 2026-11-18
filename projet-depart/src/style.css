@@ -11,9 +11,10 @@ main { padding: 28px 0; }
 .big { font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.07; max-width: 18ch; font-weight: 750; margin: .22em 0; }
 .lead { max-width: 62ch; }
 .sub { margin: 1.3em 0 .3em; font-weight: 720; font-size: 1.4rem; }
-.schema { width: 720px; display: block; }
+.shell { width: min(100%, 940px); }
+.schema { width: 100%; max-width: 720px; height: auto; }
 .facts, .events { padding-left: 1.4em; }
 button { background: #4541AD; color: white; font: inherit; padding: .52em 1em; border: 0; border-radius: .45em; cursor: pointer; }
 :focus-visible { outline: 3px solid #403C9E; outline-offset: 4px; }
 footer { border-block-start: 1px solid #c7c7d6; border-block-end: 0; font-size: .9rem; }
-@media (max-width: 600px) { .facts { display: none; } }
+@media (max-width: 600px) {  }

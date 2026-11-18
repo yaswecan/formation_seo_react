@@ -5,7 +5,8 @@ export default function Metas({ page }) {
   const url = new URL(page.path, origin).href;
   return (
     <>
-      <title>Ateliers</title>
+      <title>{page.title}</title>
+      <meta name='description' content={page.description} />
       <link rel="canonical" href={url} />
     </>
   );
